@@ -1,0 +1,597 @@
+*{
+    /* Resetear comportamiento por defecto del HTML */
+    padding: 0;
+    margin: 0;
+    font-family: 'felicity-bold', sans-serif;
+    font-size: 20px;
+}
+/*¨Header */
+ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+ul > li{
+    list-style: none;
+}
+.barraMenú{
+    width: 100%;
+    background-color: #87328F;
+    display: flex;
+    height: 4em;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+.listaMenú{
+    display: flex;
+    width: 700px;
+    margin-right: 180px;
+}
+.listaMenú > li{
+    padding: 30px;
+}
+.imagen{
+    display: flex;
+    width: 500px;
+}
+.logo{
+    width: 100px;
+}
+ul > li > a:hover{
+    color: black;
+    transition: .5s ease;
+}
+ul > li > a:focus{
+    outline: none;
+}
+/* Sección Home */
+.home{
+    /* Usar un degradado con opacidad como primer fondo.
+    Este es un degradado de un negro transparente con otro negro transparente 
+    exactamente igual. Como segundo fondo tenemos la imagen. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/Pescado_Rabioso_1972-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.textosHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textosHome > h1{
+    font-size: 4em;
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-bottom: 50px;
+    color: white;
+    width: 1100px;
+}
+.textosHome > h2{
+    color: white;
+}
+/* About - Nosotros */
+.nosotros{
+    background-color: #B779BD;
+    display: flex;
+    justify-content: center;
+}
+.textoNosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-left: 50px;
+}
+.textoNosotros > h2{
+    font-size: 4em;
+    padding-bottom: 20px;
+}
+.textoNosotros > p{
+    text-align: justify;
+}
+.spinettaImagen{
+    display: flex;
+}
+span{
+    font-size: 25px;
+    font-weight: bold;
+}
+span > a{
+    text-decoration: none;
+    color: black;
+}
+/* Integrantes */
+.integrantes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    background-image: linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url("./img/PúblicoSpinetta.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+.integrantes > h2{
+    font-size: 4em;
+    text-transform: uppercase;
+    color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tarjeta{
+    width: calc(33.333% - 40px); /* Cada tarjeta tendrá un ancho que ocupa aproximadamente un tercio del 
+                                contenedor padre, pero con un ajuste de 40 píxeles para dejar espacio para los 
+                                márgenes.*/
+    margin:20px;
+    border-radius: 6px;
+    overflow: hidden; /* Los elementos fuera del contenedor tarjeta se ocultan */
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default; /* Para que no aparezca el cursor de texto al pasar por encima de las tarjetas */
+    transition: all 400ms ease;
+}
+.tarjeta:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%); /* Cuando pasemos el cursor por encima de las tarjetas, se traslada a 3% hacia arriba */
+}
+/* Ajustar imágenes */
+.tarjeta img{
+    width: 100%;
+    height: 200px;
+}
+.tarjeta .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.tarjeta .contenido p{
+    line-height: 1.5;
+    color: #845C94;
+}
+.tarjeta .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #67006B;
+}
+.tarjeta .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #7E1A94;
+    border: 1px solid #7E1A94;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.tarjeta .contenido a:hover{
+    background-color:#7E1A94;
+    color: white;
+}
+.fila {
+    display: flex;
+}
+.fila2{
+    display: flex;
+    justify-content: center;
+}
+/* Música */
+.música{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+    padding-top: 50px;
+    position: relative;
+    padding-bottom: 50px;
+}
+.música h2{
+    font-size: 2em;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.fotoAlbum {
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.fotoAlbum:hover {
+    transform: scale(1.1);
+}
+.fotoAlbum img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+.fotoAlbum:hover img {
+    transform: scale(1);
+}
+.contenedorMusica{
+    margin-top: 20px;
+}
+.nombreAlbum{
+    text-align: center;
+    margin-top: 10px;
+}
+.contenedorAlbumes{
+    display: flex;
+}
+.contenedorFotoMusica{
+    display: flex;
+    flex-direction: column;
+}
+.oculto{
+    display: none;
+}
+.botonesCarrousel button{
+    font-size: 1.8em;
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    position: absolute;
+    top: 0;         /* Indicamos que el elemento ocupe toda la altura de su contenedor */
+    bottom: 0;
+    margin: auto; /* Lo centramos verticalmente */
+    border: none;
+    color: #7E1A94;
+    box-shadow: 0 0 16px rgba(1,17,39,0.25);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.botonesCarrousel button:focus { /* La propiedad :focus en CSS se utiliza para aplicar
+                             estilos a un elemento que está enfocado (seleccionado
+                             por el usuario para interactuar). Con esto le sacamos el borde
+                             predeterminado del navegador a los botones. */
+    outline: none;
+    border: none;
+}
+.iconoSlide{
+    font-size: 28px;
+}
+#botonSiguiente {
+    right: 20px;
+}
+
+#botonAnterior {
+    left: 20px;
+}
+.fade {
+    animation-name: fade; /* Coincide con el nombre definido en @keyframes */
+    animation-duration: 1.5s;/* Duración de la animación en segundos */
+}
+  
+@keyframes fade {
+    from {opacity: .4} /* Indica el estado inicial de la animación. Establece 
+                        la opacidad del elemento en 0.4 (40%).*/
+    to {opacity: 1} /* Estado final. La opacidad del elemento es del 100% */
+    /* La animación hace que la opacidad del elemento cambie suavemente
+     de 0.4 a 1 durante 1.5 segundos. */
+}
+
+/* Tienda */
+.tienda{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background-image: linear-gradient(rgba(129, 38, 228,0.2),rgba(70, 7, 244,0.5)), url("./img/imagenPescadoRabiosoDibujo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+.productosDeLaBanda{
+    display: flex;
+    justify-content: center;
+}
+.tienda h2{
+    font-size: 2em;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+.contenedorTienda{
+    height: 510px;
+    width: 25%;
+    box-shadow: 0 0 7px #111;
+    margin: 0 30px;
+    background-color: white;
+    cursor: pointer;
+}
+.contenedorTienda .producto{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 130px;
+}
+.producto{
+    transition: transform .5s ease;
+}
+.producto img{
+    margin: auto;
+    display: block; /* Nos aseguramos de que ocupe todo el ancho disponible dentro de su contenedor. */
+}
+.remera img{
+    height: 330px;
+    width: 280px;
+}
+.gorra img{
+    width: 300px;
+    height: 300px;
+}
+.taza img{
+    width: 330px;
+    height: 330px;
+}
+.informacionProducto{
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+.informacionProducto h3{
+    font-size: 1.3em;
+    text-align: center;
+}
+.informacionProducto p{
+    text-align: center;
+    font-size: .9em;
+    color: #555;
+}
+.precio{
+    height: 50px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.caja-precio{
+    width: 80px;
+}
+.precio1{
+    color: red;
+    font-size: 18px;
+    text-decoration: line-through;
+}
+.precio2{
+    font-size: 1.5em;
+}
+.carritoCompras{
+    font-size: 50px;
+}
+.carritoCompras:hover{
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+.producto:hover {
+    transform: scale(1.1); /* Aplica una animación de escala al pasar el ratón */
+    cursor: pointer;
+}
+.tienda a{
+    outline: none;
+}
+/* Galería */
+.galería{
+    height: 90vw;
+    position: relative;
+}
+.galería > h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+.galeria-img{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid; /* Modelo de diseño de cuadrícula de CSS. */
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); /* Se crea una cuadrícula con columnas que se ajustan 
+                                                            automáticamente al tamaño del contenedor y tienen un 
+                                                            ancho mínimo de 240px y un ancho máximo de 1fr 
+                                                            (fracción del espacio disponible). 
+                                                            Esto permite que las columnas se ajusten dinámicamente 
+                                                            en función del tamaño de la pantalla.*/
+    gap: 30px;
+}
+.galeria-img img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 1s;
+}
+.galeria-img img:hover{
+    transform: scale(1.2);
+}
+/* Contacto */
+.contacto{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 800px;
+    background-image: linear-gradient(rgba(129, 38, 228,0.2),rgba(70, 7, 244,0.5)), url("./img/ImagenFondoSpinetta.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.contacto > h2 {
+    font-size: 2em;
+    line-height: 38px;
+    padding: 40px 30px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin: 30px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(#8126E4,#4607F4);
+    border-radius: 40px;
+    width: 500px;
+    text-align: center;
+}
+form{
+    padding: 50px 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    transition: .5s ease;
+    background-color: white;
+}
+form:hover{
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    transition: .5s ease;
+}
+.entradaDatos{
+    display: flex;
+    flex-direction: column;
+}
+input, textarea{
+    background-color: #f2d2f5;
+    padding: 20px 10px;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 30px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+::placeholder{
+    color: rgb(255, 255, 255);
+}
+:focus{
+    outline: 1px solid #87328F;
+}
+.botónEnviar{
+    background: linear-gradient(#8126E4,#4607F4);
+    cursor: pointer;
+}
+.botónEnviar:hover{
+    background: linear-gradient(#8653bc,#28155d);
+}
+/* Footer */
+#footer{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.7)), url("./img/Pescadito.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.9;
+    transition: background 0.5s ease, opacity 0.5s ease; 
+    /* Agrega una transición suave de 0.5 segundos a las propiedades de fondo (background) 
+    y opacidad (opacity). Esto especifica que cualquier cambio en estas propiedades 
+    se realizará suavemente durante 0.5 segundos con "ease". */
+}
+.textoFooter{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textoConcierto{
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+.copyright{
+    padding-top: 40px;
+}
+.logosRedes{
+    display: flex;
+    justify-content: center;
+}
+.iconoRedes{
+    width: 60px;
+    height: 60px;
+    padding: 30px;
+    transition: transform 0.5s ease; /* Agrega una transición a la propiedad transform */
+}
+.iconoRedes:hover {
+    transform: scale(1.2); 
+}
+#footer:hover {
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url("./img/SpinettaCantando.jpg");
+    opacity: 1; 
+}
+#footer a{
+    outline: none;
+}
+.concierto{
+    display: flex;
+    justify-content: center;
+}
+.videoConcierto{
+    width: 500px;
+}
+/* Validación de datos */
+.error-message {
+    color: red;
+    font-size: 20px;
+}
+/* Mensaje de comprobación */
+#fondoOscuro{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0; /* Aseguran que la capa se coloque en la esquina superior
+             izquierda de la ventana del navegador. */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+    z-index: 1000; 
+}
+@keyframes fadeIn { /* Keyframes crea animaciones mediante la definición de fotogramas clave.*/
+    from {     /* El elemento tiene opacidad 0 al inicio. El elemento se desplaza hacia arriba 
+            20 píxeles. */
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+    to {        /* El elemento tiene opacidad 1 al final. El elemento vuelve a su posicionamiento original
+                sin desplazamiento vertical. */
+    opacity: 1; 
+    transform: translateY(0);
+    }
+    /* La animación fadeIn hará que el mensaje de comprobación pase de ser invisible 
+    (opacity: 0) y de estar desplazado hacia arriba (transform: translateY(-20px))
+    a ser completamente visible y sin desplazamiento (opacity: 1, transform: translateY(0)). */
+}
+#mensajeComprobación{
+    background-color: white;
+    width: 500px;
+    height: 150px;
+    border-radius: 20px;
+    margin:80px auto;
+    transition: 1s;
+    overflow: hidden;
+    z-index: 1001;
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
